@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Example of Time Telling</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="col-lg-12">
+<div class="jumbotron">
+ <div class="container"><h1>Train Scheduler</h1>
+ <h2>You won't miss another train... ever!!!</h2>
+ </div>
+</div>
+</div>
+
+    
+<div class="container">
+   <br>
+    <div class="row">
+
+     <div class="col-lg-12">
+
+     <h3 id="full-train-list">CURRENT TRAIN SCHEDULE</h3>
+     <table class="table table-hover">
+        <th>TRAIN NAME</th>
+        <th>DESTINATION</th>
+        <th>FREQUENCY (Min)</th>
+        <th>NEXT ARRIVAL</th>
+        <th>MINUTES AWAY</th>
+  
+     </table>
+       <div class="panel panel-default">
+         <div class="panel-heading">
+           <h3 class="panel-title">ADD TRAIN</h3>
+         </div>
+         <div class="panel-body">
+           <form role="form">
+             <div class="form-group">
+               <label for="name-input">TRAIN NAME</label>
+               <input class="form-control" id="name-input" type="text">
+             </div>
+             <div class="form-group">
+               <label for="dest-input">DESTINATION</label>
+               <input class="form-control" id="dest-input" type="text">
+             </div>
+             <div class="form-group">
+               <label for="firstTime-input">FIRST TRAIN TIME (HH:mm - Military Time)</label>
+               <input class="form-control" id="firstTime-input" type="time">
+             </div>
+             <div class="form-group">
+               <label for="tFrequency-input">FREQUENCY (Min):</label>
+               <input class="form-control" id="tFrequency-input" type="time">
+             </div>
+           
+
+             <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+           </form>
+
+         </div>
+       </div>
+       
+     </div>
+    <script type="text/javascript" src="train.js"></script>
+</body>
+
+</html>
